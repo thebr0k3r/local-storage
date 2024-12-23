@@ -1,5 +1,5 @@
-import type { JsonObject, TransformFn } from "./types"
 import { readFileSync, writeFileSync } from "fs"
+import type { JsonObject, TransformFn, } from "./types"
 
 class StorageManager<T extends JsonObject> {
 

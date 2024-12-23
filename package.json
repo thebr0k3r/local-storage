@@ -10,8 +10,8 @@
   "author": "br0k3r",
   "license": "ISC",
   "type": "commonjs",
-  "main": "./dist/LocalStorage.js",
-  "types": "./dist/LocalStorage.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "keywords": [
     "typescript",
     "NodeJS"
