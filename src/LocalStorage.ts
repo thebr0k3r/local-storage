@@ -8,8 +8,8 @@ class LocalStorage {
 
     private static STORAGE = 'localStorage.json'
 
-    constructor(private options: StorageOptions = { path: '/' }) {
-        this.options.path = join(__dirname, `${options.path}/${LocalStorage.STORAGE}`)
+    constructor(private options: StorageOptions = {}) {
+        this.options.path = options?.path || `${join(__dirname).split('node_modules')?.at(0)}${LocalStorage.STORAGE}`
     }
 
     static defaultStorage<T extends JsonObject>(initData?: T) {

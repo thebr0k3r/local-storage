@@ -9,9 +9,9 @@ const StorageManager_1 = __importDefault(require("./StorageManager"));
 class LocalStorage {
     options;
     static STORAGE = 'localStorage.json';
-    constructor(options = { path: '/' }) {
+    constructor(options = {}) {
         this.options = options;
-        this.options.path = (0, path_1.join)(__dirname, `${options.path}/${LocalStorage.STORAGE}`);
+        this.options.path = options?.path || `${(0, path_1.join)(__dirname).split('node_modules')?.at(0)}${LocalStorage.STORAGE}`;
     }
     static defaultStorage(initData) {
         const storage = new LocalStorage();
